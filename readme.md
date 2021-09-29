@@ -16,7 +16,7 @@ Install via [npm](https://www.npmjs.com/)
 $ npm install
 ```
 
-Next, set up your own database and knex, please make sure your PostgreSQL is running and create your own `.env` file inside the directory to store your knex connection details.
+Next, set up your own database and knex, please make sure your PostgreSQL is running and create your own `.env` file inside the root directory to store your knex connection details.
 
 .env file example:
 

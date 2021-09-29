@@ -1,7 +1,3 @@
-// *************************************************************** //
-// Before running the test, please connect to the tester database with reference to the knexfile.js inside this "/tests" directory
-// *************************************************************** //
-
 const request = require("supertest");
 const app = require("../app");
 const knexConfig = require("./knexfile").development;
