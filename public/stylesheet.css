@@ -1,0 +1,38 @@
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: hsl(60, 100%, 97%);
+}
+
+header,
+footer {
+  height: 5vh;
+  background-color: hsl(214, 69%, 15%);
+  color: hsl(44, 68%, 77%);
+}
+
+h1 {
+  font-family: "Lobster", cursive;
+  letter-spacing: 0.2em;
+}
+
+p {
+  font-size: 13px;
+}
+
+.card {
+  min-width: 30%;
+  min-height: 200px;
+  background-color: hsl(44, 100%, 88%);
+}
+
+.old-note-textarea {
+  background-color: hsl(44, 100%, 88%);
+}
+
+.fa-check-circle {
+  color: hsl(142, 80%, 45%);
+}
+
+.fa-times-circle {
+  color: hsl(0, 60%, 50%);
+}

@@ -1,0 +1,29 @@
+<section class="row mb-5 mx-1">
+  <h2 class="lead col-12 my-3 px-4">Welcome back, {{user}}!</h2>
+    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+      <form id="new-note-form" action="/api/notes" method="post" name="new-note-form" class="px-2">
+        <div>
+          <button id="new-note-submit" type="submit" value="submit" class="btn btn-dark my-2"><i class="fas fa-plus"></i> Add</button>
+          <button type="reset" value="reset" class="btn btn-dark my-2 ms-2"><i class="fas fa-eraser"></i> Clear</button>
+        </div>
+        <textarea id="new-note-textarea"type="text" class="mx-0 w-100" rows="20" name="note" placeholder="Jot your notes here!"></textarea>
+      </form>
+    </div>
+
+    <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12 pt-5">
+      <div id="old-notes" class="row d-flex align-items-center justify-content-center">
+        {{#each notes}}
+          <div class="note-card card col-12 col-xl-3 col-lg-5 col-md-12 col-sm-12 col-xs-12 p-2 m-2 position-relative border border-top-0 border-start-0 border-3 rounded-2">
+            <form id="{{this.id}}">
+              <textarea class="old-note-textarea border-0 p-3 mb-3 w-100" rows="8" name="old-note" placeholder="This note is empty">{{this.notes}}</textarea>
+              <div class="editor-btns position-absolute start-0 bottom-0 ms-2">
+                <button class="save-btn btn btn-transparent p-0"><i class="fas fa-check-circle fs-5"></i></button>
+                <button class="return-btn btn btn-transparent p-0"><i class="fas fa-times-circle fs-5"></i></button>
+              </div>
+              <button class="delete-btn btn btn-transparent position-absolute bottom-0 end-0 me-2 p-0"><i class="fas fa-trash-alt fs-5 text-black-50"></i></button>
+            </form>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+</section>
