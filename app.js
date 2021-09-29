@@ -9,7 +9,7 @@ const knex = require("knex")(knexConfig);
 
 // Set up handlebars
 const exphbs = require("express-handlebars");
-app.engine("handlebars", exphbs({ defaultLayout: "main.handlebars" }));
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Set up basic auth

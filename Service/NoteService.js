@@ -11,7 +11,7 @@ class NoteService {
         .where("username", "=", user);
       return userQuery[0].id;
     } catch (err) {
-      throw err;
+      throw new Error("User does not exist");
     }
   }
 
@@ -34,7 +34,7 @@ class NoteService {
       noteData[user] = noteArr;
       return noteData[user];
     } catch (err) {
-      throw err;
+      throw new Error("User does not exist, cannot list note!");
     }
   }
 
@@ -43,7 +43,7 @@ class NoteService {
       let userID = await this.getUserID(user);
       return this.knex.insert({ note: note, user_id: userID }).into("notes");
     } catch (err) {
-      throw err;
+      throw new Error("User does not exist, cannot add note!");
     }
   }
 
@@ -55,7 +55,7 @@ class NoteService {
         .andWhere("id", "=", index)
         .update({ note: note });
     } catch (err) {
-      throw err;
+      throw new Error("User does not exist, cannot edit note!");
     }
   }
 
@@ -67,7 +67,7 @@ class NoteService {
         .andWhere("id", "=", index)
         .del();
     } catch (err) {
-      throw err;
+      throw new Error("User does not exist, cannot delete note!");
     }
   }
 }
