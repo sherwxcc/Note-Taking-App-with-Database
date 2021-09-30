@@ -1,5 +1,5 @@
 // *************************************************************** //
-// Before running the test, please connect to the tester database with reference to the knexfile.js inside this "/tests" directory
+// Before running the this test, please connect to the tester database with reference to the knexfile.js inside this "/tests" directory
 // *************************************************************** //
 
 const NoteService = require("../Service/NoteService");
