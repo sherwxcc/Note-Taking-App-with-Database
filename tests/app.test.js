@@ -1,7 +1,5 @@
 const request = require("supertest");
 const app = require("../app");
-const knexConfig = require("../knexfile").development;
-const knex = require("knex")(knexConfig);
 
 // Testing for Routes with no username and password
 describe("Routes tests without username and password", () => {
@@ -59,10 +57,7 @@ describe("Routes tests without username and password", () => {
 // Testing for routes with valid username and password
 describe("Routes tests with username and password", () => {
   test("Authorized user: Should return 404 if the route is incorrect", (done) => {
-    request(app)
-      .get("/randompath")
-      .auth("sherman", "123")
-      .expect(404);
+    request(app).get("/randompath").auth("sherman", "123").expect(404);
     done();
   });
 
